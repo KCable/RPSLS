@@ -11,9 +11,9 @@ class Human(Player):
     pass
 
     def choose_gesture(self):
-        self.chosen_gesture = str(random.randint(0,4))
+        self.gesture = str(random.randint(0,4))
         gesture_list = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
         sleep(1)
-        print(f"{self.name} has chosen {gesture_list[int(self.chosen_gesture)]}")
+        print(f"{self.name} has chosen {gesture_list[int(self.gesture)]}")
 
     pass

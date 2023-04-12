@@ -9,64 +9,63 @@ class Game:
 
     def __init__(self, name):
         self.name = name
-        
-    pass
+                
+        pass
 
     def run_game(self):
-        self.display_rules
-        self.choose_gesture
-        self.display_winner
-    pass
+        self.display_rules()
+        self.player_count()
+        self.choose_gesture(Human, AI)
+        self.display_winner()
+        pass
 
     def display_rules(self):
-        print("Games Rules\nRock crushes Scissors\nScissors cuts Paper\nPaper covers Rock \n Rock crushes Lizard \n Lizard poisons Spock\nSpock Smashes Scissors\nScissors decapitates Lizard\nLizard eats Paper\nPaper disproves Spock\nSpock vaporizes Rock ")
+        print("Games Rules\nRock crushes Scissors\nScissors cuts Paper\nPaper covers Rock \nRock crushes Lizard \nLizard poisons Spock\nSpock Smashes Scissors\nScissors decapitates Lizard\nLizard eats Paper\nPaper disproves Spock\nSpock vaporizes Rock \n ")
+        pass
+    
+    def player_count(self):
+        self.player_count = print("How many players?:\n1 or 2 ")
+        # player_count = input()
+        if self.player_count < 1 or self.player_count > 2:
+            print("Invalid number of players, please select 1 or 2: ")
+    pass            
+       
 
-    pass
-    def choose_gesture(self, gesture_list):
+    def choose_gesture(self, Human, AI):
+        self.gesture = str(random.randint(0,4))
         gesture_list = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
+        sleep(1)
+        print(f"{self.name} has chosen {gesture_list[int(self.gesture)]}")  
+        if "Rock"[0] >= "Scissors"[2]:
+            print("Rock crushes Scissors")
+        if "Scissors"[2] >= "Paper"[1]:
+            print("Scissors cuts Paper")
+        if "Paper"[1] >= "Rock"[0]:
+            print("Paper covers Rock")
+        if  "Rock"[0] >= "Lizard"[3]:
+            print("Rock crushes Lizard")
+        if  "Lizard"[3] >= "Spock"[4]:
+            print("Lizard poisons Spock")
+        if "Spock"[4] >= "Scissors"[2]:
+            print("Spock Smashes Scissors")
+        if "Scissors"[2] >= "Lizard"[3]:
+            print("Scissors decapitates Lizard") 
+        if "Lizard"[3] >= "Paper"[1]:
+            print("Lizard eats Paper") 
+        if "Paper"[1] >= "Spock"[4]:
+            print("Paper disproves Spock") 
+        if "Spock"[4] >= "Rock"[0]:
+            print("Spock vaporizes Rock") 
 
-        "Rock"[0] > "Scissors"[2]
-        "Scissors"[2] > "Paper"[1]
-        "Paper"[1] > "Rock"[0]
-        "Rock"[0] > "Lizard"[3]
-        "Lizard"[3] > "Spock"[4]
-        "Spock"[4] > "Scissors"[2]
-        "Scissors"[2] > "Lizard"[3]
-        "Lizard"[3] > "Paper"[1]
-        "Paper"[1] > "Spock"[4]
-        "Spock"[4] > "Rock"[0] 
+                
+            pass
 
     
-if [0] > [2]:
-    print("Rock crushes Scissors")
-elif [2] > [1]:
-    print("Scissors cuts Paper")
-elif [1] > [0]:
-    print("Paper covers Rock")
-elif [0] > [3]:
-    print("Rock crushes Lizard")
-elif [3] > [4]:
-    print("Lizard poisons Spock")
-elif [4] > [2]:
-    print("Spock Smashes Scissors")
-elif [2] > [3]:
-    print("Scissors decapitates Lizard")
-elif [3] > [1]:
-    print("Lizard eats Paper")
-elif [1]> [4]:
-    print("Paper disproves Spock")
-elif [4] > [0]:
-    print("Spock vaporizes Rock")
-    
-
-            
-        
-    
-
-
     def display_winner(self):
-        print(f"The winner is ")
-    pass
+        print(f"The winner is { 2/3}!")
+        pass
 
 
+
+               
 
