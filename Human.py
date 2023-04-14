@@ -5,9 +5,9 @@ from time import sleep
 class Human(Player):
     def __init__(self, name):
         super().__init__()
-        self.name = Human
+        self.name = name
         self.score = 0
-        
+  
     pass
 
     def choose_gesture(self):

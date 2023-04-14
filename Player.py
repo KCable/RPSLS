@@ -5,9 +5,10 @@ class Player:
 
     def __init__(self, name):
         self.name = name
-        
+        self.Player_list = []
     pass
 
+           
     def choose_gesture(self):
         self.gesture = str(random.randint(0,4))
         gesture_list = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]

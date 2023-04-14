@@ -5,7 +5,7 @@ from time import sleep
 class AI(Player):
     def __init__(self, name):
         super().__init__()
-        self.name = AI
+        self.name = name
         self.score = 0
         
         
