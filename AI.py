@@ -9,5 +9,5 @@ class AI(Player):
 
     def choose_gesture(self):
         self.current_gesture = choice(self.gesture_list)     
-        print(f"{self.name} chose {self.current_gesture}!")
+        print(f"{self.name} chose {self.current_gesture.name}!")
         pass
