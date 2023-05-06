@@ -1,5 +1,5 @@
 import random
-from time import sleep
+
 
 
     
@@ -10,6 +10,7 @@ class Player:
         self.score:int = 0
         self.gesture_list:list = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
         self.current_gesture:str = ""
+        pass
 
     
     def choose_gesture(self): 
